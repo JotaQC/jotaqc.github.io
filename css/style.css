@@ -1,0 +1,486 @@
+/* Fuente importada desde un repositorio externo */ 
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Fuente importada de manera local */
+@font-face {
+    font-family: "Reddit Sans";
+    src: url(../fonts/Reddit_Sans/RedditSans-VariableFont_wght.ttf);
+}
+
+html {
+    font-size: 10px;
+}
+
+:root {
+    /* -- Paleta de colores y pequeñas modificaciones -- */
+    /* Fondo */
+    --colorBackground: rgb(0, 214, 214);
+    /* Borde containers */
+    --border: 2px solid black;
+    /* Borde container img */
+    --borderIMG: 0.5px solid black;
+    /* Sombra container img */
+    --shadowContainerIMG: 0 1px 10px 2px rgb(123, 123, 123);
+    /* Fondo containers & texto enlaces */
+    --colorBGContainer: white;
+    --colorText: white;
+    /* Sombras containers */
+    --shadowContainer: 10px 15px teal;
+    /* Enlaces & hoover */
+    --colorEnlaces: rgb(97,58,180);
+    /* Enlaces gradient */
+    --colorEnlacesGradient: linear-gradient(317deg, rgba(252,98,224,1) 22%, rgba(32,132,255,1) 100%);
+    /* Enlaces efecto */
+    --enlacesEfectoOrigen: transform 450ms;
+    /* Enlaces efecto (hover) */
+    --enlaceEfectoHover: transform 300ms; 
+    --enlaceEfectoHoverPosition: translateY(-5px);
+    /* Efecto enlace copyright */
+    --transicionOrigen: all .2s 0s ease;
+    /* Efecto enlace copyright (hover) */
+    --transicionHover: all .2s 0s ease;
+    --tamanioTextoHover: 1.2em;
+    /* Sombra cookies */
+    --shadowCookies: 0 1px 10px 2px rgb(123, 123, 123);
+    --shadowCookiesIMG: 0 1px 10px 2px rgb(123, 123, 123);
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Reddit Sans";
+}
+
+body {
+    background-color: var(--colorBackground);
+    margin: 0 10px; /* Dispositivos móviles */
+}
+
+button, a {
+    cursor: pointer; /* Esto aplica el mismo estilo de cursor a botones y enlaces */
+}
+
+.fade {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+.container-1 {
+    margin: 20px auto 20px; /* Margen superior por defecto */
+    border: var(--border);
+    border-radius: 20px;
+    padding: 20px;
+    width: 500px;
+    overflow: auto;
+    box-shadow: var(--shadowContainer);
+    background-color: var(--colorBGContainer);
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 600px) {
+    .container-1 {
+        margin: 5vh auto 20px;
+        width: 90%;
+    }
+}
+
+/* Pantallas medianas */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container-1 {
+        margin: 5vh auto 20px;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1025px) {
+    .container-1 {
+        margin: 5vh auto 20px;
+    }
+}
+
+.container-2, .container-3, .container-4, .container-5, .container-6, .container-7 {
+    border: var(--border);
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 20px;
+    overflow: auto;
+    box-shadow: var(--shadowContainer);
+    background-color: var(--colorBGContainer);
+}
+
+.container-2 {
+    width: 500px;
+}
+
+.container-3 {
+    width: 600px;
+    display: none;
+}
+
+.container-4, .container-5, .container-6, .container-7 {
+    width: 500px;
+    display: none;
+}
+
+.img-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.img-container {
+    width: 250px;
+}
+
+.img-trabajos {
+    max-width: 100%;
+    box-shadow: var(--shadowContainerIMG);
+    border-radius: 20px;
+}
+
+.container-7 {
+    display: block;
+    text-align: center;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .container-2, .container-4, .container-5, .container-6, .container-7 {
+        width: 90%;
+    }
+
+    .container-3 {
+        width: 90%;
+    }
+}
+
+h1 {
+    font-size: 4.2em;
+}
+
+h2 {
+    font-size: 2.8em;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+p {
+    margin: 20px auto;
+    font-size: 2em;
+}
+
+p.p_centrado {
+    text-align: center;
+}
+
+.botones-lista {
+    white-space: pre-line;
+}
+
+.enlace {
+    font-size: 1.6em;
+    text-align: center;
+    font-weight: 700;
+    display: block;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin: 0 auto;
+    width: 170px;
+    text-decoration: none;
+    color: var(--colorText);
+    background: var(--colorEnlaces);
+    background: var(--colorEnlacesGradient);
+    transition: var(--enlacesEfectoOrigen);
+}
+
+.enlace_trabajos {
+    font-size: 1.6em;
+    text-align: center;
+    font-weight: 700;
+    display: block;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin: 0 auto;
+    width: 220px;
+    text-decoration: none;
+    color: var(--colorText);
+    background: var(--colorEnlaces);
+    background: var(--colorEnlacesGradient);
+    transition: var(--enlacesEfectoOrigen);
+}
+
+.formulario-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.form-fields-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.input-formulario {
+    width: 300px;
+    border-style: none;
+    outline: none;
+    height: calc(1em + 1.6em + 0.5em);
+    width: 100%;
+    padding: 0.8em 1em;
+    border: 0.15em solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(black, black);
+    background-clip: padding-box, border-box;
+    border-radius: 1.8em;
+}
+
+.title-input-formulario {
+    position: relative;
+    left: 3em;
+    top: 0.90em;
+    padding: 0 5px;
+    background: white;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+
+textarea.input-formulario {
+    height: 150px;
+    width: 320px;
+    resize: none;
+}
+
+@media (max-width: 600px) {
+    textarea.input-formulario {
+        width: 280px;
+    }
+}
+
+.boton-formulario {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2em;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px auto 10px;
+    width: 100px;
+    text-decoration: none;
+    color: var(--colorText);
+    background: var(--colorEnlaces);
+    background: var(--colorEnlacesGradient);
+    transition: var(--enlacesEfectoOrigen);
+}
+
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cookies-advice {
+    display: none;
+}
+
+.cookies_advice_main {
+    margin: 50px auto;
+    border: var(--border);
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: var(--shadowCookies);
+    background-color: var(--colorBGContainer);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .cookies_advice_main {
+        margin: 200px auto;
+        border: var(--border);
+        border-radius: 20px;
+        padding: 20px;
+        width: 250px;
+        box-shadow: var(--shadowCookies);
+        background-color: var(--colorBGContainer);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+
+    .sobre_mi {
+        text-align: center !important;
+    } 
+}
+
+.cookies_advice_text {
+    text-transform:uppercase;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.enlace_cookies {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    display: block;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 10px auto 0;
+    width: 90px;
+    text-decoration: none;
+    color: var(--colorText);
+    background: var(--colorEnlaces);
+    background: var(--colorEnlacesGradient);
+    transition: var(--enlacesEfectoOrigen);
+}
+
+.cookies_img_main {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+}
+
+.cookies_img {
+    width: 60px;
+    height: auto;
+}
+
+.sobre_mi {
+    text-align: justify;
+}
+
+span.span_bold {
+    font-weight: 700;
+}
+
+span.span_bold_cursiva {
+    font-weight: 700;
+    font-style: italic;
+}
+
+span.span_cursiva_pequeña {
+    font-style: italic;
+    font-size: 0.6em;
+    font-weight: 800;
+}
+
+span.span_salto_linea {
+    display: block;
+}
+
+.copyr {
+    font-size: 1.6em;
+}
+
+.copyr_enlace {
+    text-decoration: none;
+    color: black;
+    transition: var(--transicionOrigen);
+}
+
+.enlace:hover , .enlace_trabajos:hover , .boton-formulario:hover , .enlace_cookies:hover {
+    transition: var(--enlaceEfectoHover);
+    transform: var(--enlaceEfectoHoverPosition);
+}
+
+.copyr_enlace:hover {
+    color: var(--colorEnlaces);
+    transition: var(--transicionHover);
+    font-size: var(--tamanioTextoHover);
+}
+
+/* -- TODO EL CSS DEL MODAL -- */
+
+/* Estilos para el fondo oscuro */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+  
+  /* Estilos para la imagen dentro del modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 20px;
+}
+  
+  /* Estilos para el texto del pie de imagen */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.modal-content, #caption {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 4em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+  /* Estilos para el botón de cerrar */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 4em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
