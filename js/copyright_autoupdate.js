@@ -8,5 +8,5 @@ document.addEventListener("DOMContentLoaded", function () {
     var currentYear = new Date().getFullYear();
 
     // Actualiza el contenido del elemento con el año actual
-    yearElement.innerHTML = `© ${currentYear}&emsp;─&emsp;<a class="copyr_enlace" href='https://github.com/SrCroqueta' target="_blank">Sr.Croqueta<a/>`;
+    yearElement.innerHTML = `© ${currentYear}&emsp;─&emsp;<a class="copyr_enlace" href='https://github.com/JotaQC' target="_blank">JotaQC<a/>`;
 });
