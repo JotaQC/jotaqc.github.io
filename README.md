@@ -1,2 +1,2 @@
-# Sr.Croqueta's website
+# JotaQC's website
 Mi página web.
