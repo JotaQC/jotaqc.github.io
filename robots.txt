@@ -6,7 +6,7 @@ User-agent: *
 ## SITEMAPS
 
 # SITEMAP INDEX
-Sitemap: https://srcroqueta.github.io/mywebsite/sitemap.xml
+Sitemap: https://jotaqc.github.io/mywebsite/sitemap.xml
 
 ## SPECIFIC BOTS SETTINGS
 
