@@ -1,2 +1,2 @@
-# jotaqc.github.io
-Mi web personal
+# JotaQC's website
+Mi página web.
